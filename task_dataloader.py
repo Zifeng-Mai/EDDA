@@ -45,7 +45,7 @@ TOTAL_ITEM_ID_DICT = dict()  # {user_o_ids: [user_n_ids]}
 USER_DOMAIN_DICT = dict()
 ITEM_DOMAIN_DICT = dict()
 
-NEG_SAMPLE_SIZE = 10
+NEG_SAMPLE_SIZE = 99
 
 
 class TaskDataset(Dataset):
