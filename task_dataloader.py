@@ -2,7 +2,6 @@ import collections
 import pdb
 import random
 import time
-import dgl
 
 from torch.utils.data import DataLoader, Dataset, random_split
 import torch

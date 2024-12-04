@@ -16,19 +16,19 @@ from sklearn.metrics import roc_auc_score, accuracy_score
 
 
 def parse_args(parser):
-    parser.add_argument('--dataset', default='Amazon_5core', type=str, help='dataset')
+    parser.add_argument('--dataset', default='Amazon', type=str, help='dataset')
     parser.add_argument('--bs', default=8192, type=int, help='batch size')
     parser.add_argument('--input_size', default=128, type=int, help='input size')
     parser.add_argument('--hidden_dim', default=128, type=int, help='hidden dim')
     parser.add_argument('--aggr_dim', default=64, type=int, help='aggr dim')
-    parser.add_argument('--topk', default=1, type=int, help='topk')
+    parser.add_argument('--topk', nargs='+', default=[5, 10, 15], type=int, help='topk')
     parser.add_argument('--epoch', default=5000, type=int, help='epoch')
     parser.add_argument('--coe_dis', default=0.3, type=float, help='coefficient of discrepancy loss')
     parser.add_argument('--edge_dropout', default=0.7, type=float, help='Edge dropout ratio for EDDA')
     parser.add_argument('--dataset_path', default='/', type=str, help='dataset path')
     parser.add_argument('--ablation', default='/', type=str, help='ablation')
     parser.add_argument('--tasks', nargs='+', type=str,
-                        default=['Arts', 'Inst', 'Music', 'Pantry', 'Video', 'Luxury'])
+                        default=['Arts', 'Games', 'Instruments', 'Pantry'])
     parser.add_argument('--pretrain_path', type=str, default=None,
                         help='ID/Path of pretrained multi-task learning model')
     parser.add_argument('--target', type=str, default=None,

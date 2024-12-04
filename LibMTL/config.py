@@ -4,7 +4,7 @@ import torch
 
 _parser = argparse.ArgumentParser(description='Configuration for LibMTL')
 # general
-_parser.add_argument('--seed', type=int, default=2022, help='random seed')
+_parser.add_argument('--seed', type=int, default=2024, help='random seed')
 _parser.add_argument('--gpu_id', default='0', type=str, help='gpu_id')
 _parser.add_argument('--weighting', type=str, default='EW',
                      help='loss weighing strategies, option: EW, UW, GradNorm, GLS, RLW, \
