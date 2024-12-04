@@ -23,7 +23,7 @@ def parse_args(parser):
     parser.add_argument('--aggr_dim', default=64, type=int, help='aggr dim')
     parser.add_argument('--topk', nargs='+', default=[5, 10, 15], type=int, help='topk')
     parser.add_argument('--epoch', default=5000, type=int, help='epoch')
-    parser.add_argument('--coe_dis', default=0.3, type=float, help='coefficient of discrepancy loss')
+    parser.add_argument('--coe_dis', default=0., type=float, help='coefficient of discrepancy loss')
     parser.add_argument('--edge_dropout', default=0.7, type=float, help='Edge dropout ratio for EDDA')
     parser.add_argument('--dataset_path', default='/', type=str, help='dataset path')
     parser.add_argument('--ablation', default='/', type=str, help='ablation')

@@ -12,7 +12,7 @@ from LibMTL.config import LibMTL_args, prepare_args
 from baseline.EDDA import EDDA
 from util_functions import *
 from task_dataloader import *
-
+import dgl
 import warnings
 
 warnings.filterwarnings('ignore', category=UserWarning, message='TypedStorage is deprecated')
